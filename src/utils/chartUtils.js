@@ -1,4 +1,3 @@
-cat > src/utils/chartUtils.js << 'EOF'
 /**
  * 차트 관련 유틸리티 함수들
  */

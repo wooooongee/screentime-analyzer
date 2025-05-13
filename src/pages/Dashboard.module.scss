@@ -1,5 +1,27 @@
+@import '../styles/variables.scss';
+
 .dashboard {
-    h1 {
-      margin-bottom: 1.5rem;
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .summary {
+    margin-bottom: 2rem;
+  }
+  
+  .charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+    .chartCard {
+      width: 100%;
     }
   }
+}
+
+@media (max-width: $breakpoint-md) {
+  .charts {
+    grid-template-columns: 1fr !important;
+  }
+}
