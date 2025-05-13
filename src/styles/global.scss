@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+  background-color: $background-color;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $spacing-md;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: $spacing-md;
+}
+
+button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: $font-size-normal;
+  transition: background-color 0.3s, transform 0.2s;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+  
+  &:active {
+    transform: translateY(1px);
+  }
+  
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: $spacing-sm;
+  margin-bottom: $spacing-md;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: $font-size-normal;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: $spacing-lg;
+  box-shadow: $box-shadow;
+  margin-bottom: $spacing-lg;
+}
